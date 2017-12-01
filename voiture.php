@@ -1,11 +1,11 @@
 <?php
 class Voiture {
-  public $marque;
+  private $marque;
   public $poids;
-  public $immatriculation;
+  private $immatriculation;
   public $kilometrage;
-  public $mise_en_circulation;
-  public $modele;
+  private $mise_en_circulation;
+  private $modele;
   public $couleur;
 
 
@@ -54,21 +54,31 @@ public function plaque($immatriculation) {
 public function parcouru($kilometrage) {
   if ($kilometrage < 100000) {
     echo "La voiture a peu servi, elle n'a roulé que " .$kilometrage. " KM.";
+    echo "<hr/>";
   } else if ($kilometrage > 100000 && $kilometrage < 200000) {
     echo "La voiture a moyennement servi";
+    echo "<hr/>";
   } else if ($kilometrage > 200000) {
     echo "La voiture a beaucoup servi";
+    echo "<hr/>";
   }
 }
 
 public function annee_circulation($mise_en_circulation) {
- $annee = date"Y";
-
+ $annee = date('Y');
+ $age = $annee - $mise_en_circulation;
+ echo "$age ans.";
+}
+public function drive() {
+  $kilometrage = $kilometrage + 1000
 }
 
 
 
+
 }
+
+
 
 
 

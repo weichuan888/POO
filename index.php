@@ -16,8 +16,9 @@ $marque = "BMW";
 $poids = 2;
 $immatriculation = "BE-2354";
 $kilometrage = 50000;
+$mise_en_circulation= 1986;
 
-$vehicule = new Voiture($marque, $poids, $immatriculation, $kilometrage);
+$vehicule = new Voiture($marque, $poids, $immatriculation, $kilometrage,$mise_en_circulation);
 
 
  ?>
