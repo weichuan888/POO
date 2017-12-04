@@ -7,14 +7,18 @@ class Voiture {
   private $mise_en_circulation;
   private $modele;
   public $couleur;
+  public $kilometre;
+  public $kiloms;
 
 
-public function __construct($marque, $poids, $immatriculation, $kilometrage, $mise_en_circulation) {
+public function __construct($marque, $poids, $immatriculation, $kilometrage, $mise_en_circulation, $kilometre) {
   $this->reserved($marque);
   $this->utilitaire($poids);
   $this->plaque($immatriculation);
   $this->parcouru($kilometrage);
   $this->annee_circulation($mise_en_circulation);
+  $this->drive($kilometre);
+
 }
 public function reserved($marque) {
   if ($marque == "Audi") {
@@ -68,12 +72,23 @@ public function annee_circulation($mise_en_circulation) {
  $annee = date('Y');
  $age = $annee - $mise_en_circulation;
  echo "$age ans.";
-}
-public function drive() {
-  $kilometrage = $kilometrage + 1000
+ echo "<hr/>";
 }
 
+// public function drive($kilometrage) {
+//   $kilometrage += 100000;
+//   $this->setkilometrage($kilometrage);
+//   // $kilometre = $kilometrage + $kilometre;
+//   // echo "Le compteur kilométrique a changé de " .$kilometre. " km";
+//   echo $kilometrage;
+// }
 
+public function display() {
+  $voiture = [$car];
+  foreach ($voiture as $voiture) {
+
+  }
+}
 
 
 }
